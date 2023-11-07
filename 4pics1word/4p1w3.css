@@ -1,0 +1,162 @@
+/* Set the background color for the entire webpage */
+body {
+    background-color: #0A527E; /* Replace with your preferred shade of dark blue */
+    margin: 0; /* Remove default margin to cover the entire viewport */
+    padding: 0; /* Remove default padding */
+}
+
+/* Styling for the challenge text */
+#challenge-text {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /* Ensures it appears above other content */
+}
+
+/* Centered container for the game board */
+#container {
+    text-align: center;
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    margin-top: 120px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #67C5EB;
+}
+
+/* Basic styling for the game board (inside the container) */
+#game-board {
+    text-align: center;
+}
+
+#images-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+#letters-container {
+    display: flex;
+    justify-content: center;
+}
+
+#letters-container .letter {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Styling for the text input */
+#answer-input {
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Add rounded corners */
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 80%; /* Adjust the width as needed */
+}
+
+
+#submit-button {
+    background-color: #27ae60;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#feedback {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Styling for the pop-up containers */
+#correct-popup-container,
+#wrong-popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+#popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#popup-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#next-button {
+    background-color: #27ae60;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#popup-button {
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styling for the 2x2 grid layout */
+#images-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; /* Adjust the gap between images as needed */
+}
+
+.image {
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: 100% !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Add more CSS rules for additional styling as needed */

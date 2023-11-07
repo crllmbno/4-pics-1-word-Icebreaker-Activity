@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4 Pics 1 Word</title>
+    <link rel="stylesheet" type="text/css" href="4p1w3.css">
+</head>
+<body>
+    <div id="container">
+        <div id="game-board">
+            <div id="challenge-text">
+                <h1>4 Pics 1 Word Challenge</h1>
+            </div>
+            <div id="images-container">
+                <div class="image">
+                    <img src="img/jsJava'.png" alt="Image 1">
+                </div>
+                <div class="image">
+                    <img src="img/jsScript.png" alt="Image 2">
+                </div>
+                <div class="image">
+                    <img src="img/jslibrary.jpg" alt="Image 3">
+                </div>
+                <div class="image">
+                    <img src="img/jslib.jpg" alt="Image 4">
+                </div>
+            </div>
+            <input type="text" id="answer-input" placeholder="Type your answer...">
+            <button id="submit-button">Submit</button>
+        </div>
+        <div id="feedback">
+            <!-- Display feedback to the user here -->
+            <div id="correct-popup-container">
+                <div id="popup-content">
+                    <p id="popup-message">Correct!</p>
+                    <button id="next-button">Next</button>
+                </div>
+            </div>
+            <div id="wrong-popup-container">
+                <div id="popup-content">
+                    <p id="popup-message">Incorrect!</p>
+                    <button id="popup-button">Try again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Define the correct word for the current level
+        const correctWord = "JavaScript Libraries";
+
+        // Add an event listener for the submit button
+        document.getElementById("submit-button").addEventListener("click", function () {
+            // Get the user's input from the text input field and convert to lowercase for case-insensitive comparison
+            const userInput = document.getElementById("answer-input").value.toLowerCase();
+
+            // Get the "correct-popup-container" and "wrong-popup-container" elements
+            const correctPopupContainer = document.getElementById("correct-popup-container");
+            const wrongPopupContainer = document.getElementById("wrong-popup-container");
+
+            // Check if the user's input matches the correct word
+            if (userInput === correctWord.toLowerCase()) {
+                // Display the "Correct!" pop-up
+                document.getElementById("popup-message").textContent = "Correct!";
+                correctPopupContainer.style.display = "block";
+            } else {
+                // Display the "Wrong!" pop-up
+                document.getElementById("popup-message").textContent = "Wrong!";
+                wrongPopupContainer.style.display = "block";
+            }
+        });
+
+        // Add event listeners for the "Next" and "Try again" buttons
+        document.getElementById("next-button").addEventListener("click", function () {
+            // Redirect to a new HTML page for the next level (replace 'next-level.html' with the actual URL)
+            window.location.href = '4p1w4.html';
+        });
+
+        document.getElementById("popup-button").addEventListener("click", function () {
+            // Hide both pop-up containers when the "Try again" button is clicked
+            document.getElementById("correct-popup-container").style.display = "none";
+            document.getElementById("wrong-popup-container").style.display = "none";
+
+            // Clear the text input field
+            document.getElementById("answer-input").value = '';
+        });
+
+    </script>
+</body>
+</html>
